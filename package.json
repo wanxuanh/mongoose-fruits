@@ -1,0 +1,30 @@
+{
+  "name": "mongoose_fruits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "DEBUG=fruits:* nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.1"
+  }
+}

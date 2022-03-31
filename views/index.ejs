@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+</head>
+<body>
+    <h1>Fruits</h1>
+    <!-- <pre>
+   <%=JSON.stringify(fruits, null, 2)%>
+    </pre> -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Ready To Eat</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <%- fruits.map(fruit => `<tr>
+                <td> <a href="/fruits/${fruit._id}">
+                            ${fruit.name}
+                        </a></td>
+                <td>${fruit.colour}</td>
+                <td>${fruit.readyToEat}</td>
+                <td> <a href="/fruits/${fruit._id}/edit">
+                    Edit
+                </a>
+            
+                        <form action="/fruits/${fruit._id}?_method=DELETE" method="POST">
+                            <button>Delete</button>
+                        </form>
+                     </td>
+                       
+            </tr>`).join("");%>
+        </tr>
+    </table>
+</body>
+</html>
